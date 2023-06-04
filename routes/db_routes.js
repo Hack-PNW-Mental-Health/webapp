@@ -2,13 +2,17 @@
 
 const express = require("express")
 const router = express.Router(); 
-//const bodyParser = require('body-parser');
-//router.use(bodyParser.json());
-//router.use(express.urlencoded({ extended: true }));
+const bodyParser = require('body-parser');
+router.use(bodyParser.json());
+router.use(express.urlencoded({ extended: true }));
+
+
 
 
 
 const db = require("./db.js");
+const multer = require('multer'); 
+const upload = multer() 
 
 
 
@@ -33,17 +37,31 @@ router.post("/fourm_data", async (req, res) => {
               return res.render('unsuccesful_query');
             }
         
+
+
+
+
+
             // Query executed successfully
             return res.render('succesful_query');
+
+
+
           });
         });
 
 
 
 router.post("/signature_upload", (req, res) => {
+  
+  
+  console.log("this still works")
+  const { signature } = req.file.buffer;
 
 
-  res.send("yolo")
+
+
+  res.send("this works")
 
 
 
