@@ -24,21 +24,21 @@ router.get('', (req, res) => {
 //depression page /info/depression: 
 router.get('/depression', (req, res)=> { 
     console.log("depression_page works") 
-    res.send("thank you this works the depression page works") 
+    res.render("info_depression") 
 } ) 
 
 
 //schizophrenia page yes I spelled it correctly
 router.get('/schizophrenia', (req,res) => {  
     console.log("this works lets go") 
-    res.send("ok this works")
+    res.render("info_schizophrenia")
 
 })
 
 //autism info page
 router.get('/autism', (req,res) => {
     console.log("this works") 
-    res.send("this works!") 
+    res.render("info_autism") 
 
 
 
