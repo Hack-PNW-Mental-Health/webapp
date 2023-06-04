@@ -2,9 +2,13 @@
 
 const express = require("express")
 const router = express.Router(); 
+const bodyParser = require('body-parser');
+router.use(bodyParser.json());
 router.use(express.urlencoded({ extended: true }));
 
 
+
+const db = require("./db.js");
 
 
 
@@ -17,12 +21,25 @@ router.post("/fourm_data", async (req, res) => {
         gender, 
         disorder, 
         story } = req.body;
+        
+        //the query  
+        const values = [name, age, gender, disorder, story];   
 
-    console.log(name)  
-    console.log(age)
-    console.log(gender)
-    console.log(disorder)
-    console.log(story)
-})
+        const query = 'INSERT INTO fourm_data.fourm_data (name, age, gender, disorder, story) VALUES ($1, $2, $3, $4, $5)';
+
+        const send = await db.query(query,values, (err, result) => {
+            if (err) {
+              console.error('Error executing the query: ' + err.stack);
+              return res.status(500).send('Error executing the query');
+            }
+        
+            // Query executed successfully
+            return res.status(200).render('index');
+          });
+        });
+
+
+
+
 
 module.exports = router; 
