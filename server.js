@@ -23,3 +23,7 @@ const db_routes = require('./routes/db_routes.js')
 app.use("/db_routes", db_routes) 
 
 
+const info = require('./routes/info.js')
+app.use("/info", info) 
+
+
