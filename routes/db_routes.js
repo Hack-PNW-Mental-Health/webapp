@@ -43,7 +43,11 @@ router.post("/fourm_data", async (req, res) => {
         try {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'school stress';");
         
-        console.log(names);
+                let nameArr = names.rows;
+        let result = '';
+        for (let i = 0; i < nameArr.length; i++) {
+          result += nameArr[i].name;
+        }
         } catch (err) { 
           console.error('Error executing the query: ' + err.stack);
           return res.render('unsuccessful_query');
@@ -54,7 +58,11 @@ router.post("/fourm_data", async (req, res) => {
         try {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'activities';");
         
-        console.log(names);
+                let nameArr = names.rows;
+        let result = '';
+        for (let i = 0; i < nameArr.length; i++) {
+          result += nameArr[i].name;
+        }
         } catch (err) { 
           console.error('Error executing the query: ' + err.stack);
           return res.render('unsuccessful_query');
@@ -64,8 +72,13 @@ router.post("/fourm_data", async (req, res) => {
       if (disorder == 'financial') {
         try {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'financial';");
-        
-        console.log(names);
+
+        let nameArr = names.rows;
+        let result = '';
+        for (let i = 0; i < nameArr.length; i++) {
+          result += nameArr[i].name + " ";
+        }
+        console.log(result);
         } catch (err) { 
           console.error('Error executing the query: ' + err.stack);
           return res.render('unsuccessful_query');
@@ -76,7 +89,11 @@ router.post("/fourm_data", async (req, res) => {
         try {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'social';");
         
-        console.log(names);
+                let nameArr = names.rows;
+        let result = '';
+        for (let i = 0; i < nameArr.length; i++) {
+          result += nameArr[i].name;
+        }
         } catch (err) { 
           console.error('Error executing the query: ' + err.stack);
           return res.render('unsuccessful_query');
@@ -87,7 +104,11 @@ router.post("/fourm_data", async (req, res) => {
         try {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'medical';");
         
-        console.log(names);
+                let nameArr = names.rows;
+        let result = '';
+        for (let i = 0; i < nameArr.length; i++) {
+          result += nameArr[i].name;
+        }
         } catch (err) { 
           console.error('Error executing the query: ' + err.stack);
           return res.render('unsuccessful_query');
@@ -98,7 +119,11 @@ router.post("/fourm_data", async (req, res) => {
         try {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'family';");
         
-        console.log(names);
+                let nameArr = names.rows;
+        let result = '';
+        for (let i = 0; i < nameArr.length; i++) {
+          result += nameArr[i].name;
+        }
         } catch (err) { 
           console.error('Error executing the query: ' + err.stack);
           return res.render('unsuccessful_query');
@@ -109,7 +134,11 @@ router.post("/fourm_data", async (req, res) => {
         try {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'institutionalized stigma';");
         
-        console.log(names);
+                let nameArr = names.rows;
+        let result = '';
+        for (let i = 0; i < nameArr.length; i++) {
+          result += nameArr[i].name;
+        }
         } catch (err) { 
           console.error('Error executing the query: ' + err.stack);
           return res.render('unsuccessful_query');
@@ -120,7 +149,11 @@ router.post("/fourm_data", async (req, res) => {
         try {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'other';");
         
-        console.log(names);
+                let nameArr = names.rows;
+        let result = '';
+        for (let i = 0; i < nameArr.length; i++) {
+          result += nameArr[i].name;
+        }
         } catch (err) { 
           console.error('Error executing the query: ' + err.stack);
           return res.render('unsuccessful_query');
