@@ -38,7 +38,7 @@ router.post("/fourm_data", async (req, res) => {
             }
         
 
-
+            
 
 
 
@@ -52,19 +52,29 @@ router.post("/fourm_data", async (req, res) => {
 
 
 
-router.post("/signature_upload", (req, res) => {
+router.post("/signature_upload", async (req, res) => {
   
   
   console.log("this still works")
   const { signature } = req.file.buffer;
 
+  
+  
+  const query = "INSERT INTO fourm_data.signature (signature) VALUES ($1)"
+  const send = await db.query(query,values, (err, result) => {  
 
 
+    //if query not exectued succesfully
+    if (err) {
+      console.error('Error executing the query: ' + err.stack);
+      return res.render('unsuccesful_query');
+    }
 
-  res.send("this works")
 
+    // Query executed successfully
+    return res.render('succesful_query');
 
-
+  });  
 })
 
 
