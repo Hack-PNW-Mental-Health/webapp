@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/uploads/css/homeStyles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <title>mental health</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header id="top-header">
+                <p class="pink-text">Mental Health Matters!</p>
+            </header>
+            <section class="main-section" id="layer-map">
+                <article style="display:inline" class="person" id="person1"><img src="../uploads/NelsonBlinking.gif" height="160px"/></article>
+                <article style="display:inline" class="person" id="person2"><img src="../uploads/PersonInChair.gif" height="160px"/></article>
+                <article style="display:inline" class="person" id="person3"><img src="../uploads/PongoRegular.gif" height="160px"/></article>
+                <article style="display:inline" class="person" id="person4"><img src="../uploads/NormalPerson.gif" height="160px"/></article>
+                <article style="display:inline" class="person" id="person5"><img src="../uploads/MarcusNormal.gif" height="160px"/></article>
+                <article style="display:inline" class="person" id="person6"><img src="../uploads/BaiLiObscurity.gif" height="160px"/></article>
+            </section>
+            <section class="main-section" id="signing">
+                <form action="/db_routes/fourm_data" method="post" id="signature-form">
+                    <canvas id="canvas"></canvas>
+                    <input id="button" type="submit" value="Submit"/>
+                </form>
+            </section>
+            <footer id="bottom-form">
+                <form action="/db_routes/fourm_data" method="post">
+                    <label for="name">Name *</label><br>
+                    <input name="name" id="name" type="text" required/><br>
+                    <label for="age" required>Age *</label><br>
+                    <input name="age" id="age" type="text" required/><br>
+                    <label for="gender">Gender *</label><br>
+                    <select name="gender" required>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Non-Binary</option>
+                    </select><br>
+                    <label for="disorder">Stressor *</label><br>
+                    <select id="disorder" name="disorder" required>
+                        <option>School Stress</option>
+                        <option>Activities</option>
+                        <option>Financial</option>
+                        <option>Social</option>
+                        <option>Medical</option>
+                        <option>Family</option>
+                        <option>Institutionalized Stigma</option>
+                        <option>Other</option>
+                    </select><br>
+                    <label for="story">How did you develop the stressor? *</label><br>
+                    <input id="story" type="text" name="story" required></input><br>
+
+                    <input id="button" type="submit" value="Submit"/>
+                </form>
+            </footer>
+        </div>
+
+        <script src="/uploads/scripts/index.js"></script>
+    </body>
+</html>

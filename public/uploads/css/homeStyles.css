@@ -1,0 +1,85 @@
+.wrapper {
+    display:grid;
+    grid-template-rows:2fr 4fr 3fr 2fr;
+}
+#top-header {
+    grid-row:1/2;
+}
+#layer-map {
+    grid-row:2/3;
+}
+#signing {
+    grid-row:3/4;
+}
+#bottom-form {
+    grid-row:4/5;
+}
+article {
+    display:inline;
+}
+.pink-text {
+    color:white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size:5rem;
+    text-align:center;
+}
+#top-header {
+    background:pink;
+}
+#layer-map {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+article {
+    margin:0 auto;
+}
+#signing {
+    background:pink;
+    display:grid;
+    grid-template-rows:2fr 1fr;
+}
+#signature-form {
+    grid-row:2/3;
+}
+#canvas {
+    height:5rem;
+    width:100%;
+    border:3px solid black;
+}
+
+input {
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #24292e;
+    vertical-align: middle;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+}
+input:focus{
+    border-color: pink;
+    outline: none;
+    box-shadow: pink 0px 0px 0px 3px;
+}
+
+#button {
+    padding: 15px;  
+    font-size: 14px;
+    line-height: 20px;
+    color: #24292e;
+    vertical-align: middle;
+    background-color: pink;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+}
+
