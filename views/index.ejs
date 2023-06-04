@@ -3,8 +3,9 @@
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
-        <link rel="stylesheet" href="./css/homeStyles.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./styles/homeStyles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
         <title>mental health</title>
     </head>
@@ -37,8 +38,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <form method="post">
+                <div class="col-12">   
+
+                    <--FOURM STARTS PLEASE MAKE THIS ALL ONE FOURM--->
+
+                    <form action="#" method="post">
                         <label for="sign-name-input">sign your name:</label>
                         <input class="form-control" id="sign-name-input" type="text"/>
                     </form>
@@ -49,20 +53,53 @@
                 <div class="col-6">names from db</div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <form method="get">
+                <div class="col-12">    
+                    <!---------PLEASE COMBINE WITH THIS FOURM"--------> 
+                    <form action="/db_routes/fourm_data" method="post">
+                        
+                        <!---name field---> 
                         <label for="name">type your name</label>
-                        <input class="form-control" id="name" type="text"/>
-                        <select class="form-select">
+                        <input class="form-control" id="name" type="text" name="name"/> 
+
+                        <!----age---> 
+                        <label for="age">age field</label>
+                        <input class="form-control" id="age" type="text" name="age"/>
+
+                        <!--gender--> 
+
+                        <select class="form-select" name="gender">   
+                            <option></option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>non-binary</option>
+                        </select>
+                      
+                        <!--disorder--> 
+
+                        <select class="form-select" name="disorder">   
+                            <option></option>
                             <option>depression</option>
                             <option>autism</option>
                             <option>schizophrenia</option>
                         </select>
+
+                        <!--story-->
+                        <label for="story">story field</label>
+                        <input class="form-control" id="story" type="text" name="story"/>
+                        
+                        
+                        <!--submit button-->
+                        <input type="submit" value="Submit"> 
                     </form>
+
+                     
+                    
+
+                    <!-------FORM ENDS--------> 
+
                 </div>
             </div>
         </div>
-        -->
         <div class="wrapper">
             <header>
                 <p>why mental health matters</p>
