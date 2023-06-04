@@ -14,8 +14,7 @@ const db = require("./db.js");
 
 //blank info page do what you want with it 
 router.get('', (req, res) => {
-    console.log("This is for whatever you want to do with it"); 
-    res.send("testing testing testing") 
+    res.render("info_root") 
 
 }) 
 
