@@ -4,6 +4,11 @@ const express = require("express")
 const router = express.Router(); 
 router.use(express.urlencoded({ extended: true }));
 
+
+
+
+
+//posting to database
 router.post("/fourm_data", async (req, res) => {  
     console.log("this works") 
     const { 
