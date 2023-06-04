@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .wrapper {
     display:grid;
     grid-template-rows:2fr 4fr 3fr 2fr;
@@ -42,10 +43,16 @@ article {
 #signature-form {
     grid-row:2/3;
 }
+=======
+article {
+    display:inline;
+}
+>>>>>>> origin/main
 #canvas {
     height:5rem;
     width:100%;
     border:3px solid black;
+<<<<<<< HEAD
 }
 
 input {
@@ -83,3 +90,6 @@ input:focus{
     box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
 }
 
+=======
+}
+>>>>>>> origin/main

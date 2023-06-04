@@ -56,8 +56,11 @@ router.post("/fourm_data", async (req, res) => {
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
+=======
+>>>>>>> origin/main
       if (disorder == 'activities') {
         try {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'activities';");
@@ -163,7 +166,10 @@ router.post("/fourm_data", async (req, res) => {
           return res.render('unsuccessful_query');
         }
       }
+<<<<<<< HEAD
 >>>>>>> b7afc93e3d5933da1be325382be88b681e6bc0c2
+=======
+>>>>>>> origin/main
 
 
             const render_items = {
@@ -172,10 +178,14 @@ router.post("/fourm_data", async (req, res) => {
 
             // Query executed successfully
 <<<<<<< HEAD
+<<<<<<< HEAD
             return res.render('succesful_query');
 =======
             return res.render('succesful_query', render_items);
 >>>>>>> b7afc93e3d5933da1be325382be88b681e6bc0c2
+=======
+            return res.render('succesful_query', render_items);
+>>>>>>> origin/main
 
 
 
