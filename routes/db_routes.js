@@ -30,11 +30,11 @@ router.post("/fourm_data", async (req, res) => {
         const send = await db.query(query,values, (err, result) => {
             if (err) {
               console.error('Error executing the query: ' + err.stack);
-              return res.status(500).send('Error executing the query');
+              return res.render('unsuccesful_query');
             }
         
             // Query executed successfully
-            return res.status(200).render('index');
+            return res.render('succesful_query');
           });
         });
 
