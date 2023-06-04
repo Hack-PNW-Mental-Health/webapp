@@ -2,9 +2,9 @@
 
 const express = require("express")
 const router = express.Router(); 
-const bodyParser = require('body-parser');
-router.use(bodyParser.json());
-router.use(express.urlencoded({ extended: true }));
+//const bodyParser = require('body-parser');
+//router.use(bodyParser.json());
+//router.use(express.urlencoded({ extended: true }));
 
 
 
@@ -37,6 +37,20 @@ router.post("/fourm_data", async (req, res) => {
             return res.render('succesful_query');
           });
         });
+
+
+
+router.post("/signature_upload", (req, res) => {
+
+
+  res.send("yolo")
+
+
+
+})
+
+
+
 
 
 
