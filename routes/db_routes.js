@@ -38,13 +38,14 @@ router.post("/fourm_data", async (req, res) => {
             }
         })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      
+      let result = '';
+
       if (disorder == 'school stress') {
         try {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'school stress';");
         
                 let nameArr = names.rows;
-        let result = '';
+        
         for (let i = 0; i < nameArr.length; i++) {
           result += nameArr[i].name;
         }
@@ -59,7 +60,7 @@ router.post("/fourm_data", async (req, res) => {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'activities';");
         
                 let nameArr = names.rows;
-        let result = '';
+        
         for (let i = 0; i < nameArr.length; i++) {
           result += nameArr[i].name;
         }
@@ -74,7 +75,7 @@ router.post("/fourm_data", async (req, res) => {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'financial';");
 
         let nameArr = names.rows;
-        let result = '';
+        
         for (let i = 0; i < nameArr.length; i++) {
           result += nameArr[i].name + " ";
         }
@@ -90,7 +91,7 @@ router.post("/fourm_data", async (req, res) => {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'social';");
         
                 let nameArr = names.rows;
-        let result = '';
+        
         for (let i = 0; i < nameArr.length; i++) {
           result += nameArr[i].name;
         }
@@ -105,7 +106,7 @@ router.post("/fourm_data", async (req, res) => {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'medical';");
         
                 let nameArr = names.rows;
-        let result = '';
+        
         for (let i = 0; i < nameArr.length; i++) {
           result += nameArr[i].name;
         }
@@ -120,7 +121,7 @@ router.post("/fourm_data", async (req, res) => {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'family';");
         
                 let nameArr = names.rows;
-        let result = '';
+        
         for (let i = 0; i < nameArr.length; i++) {
           result += nameArr[i].name;
         }
@@ -135,7 +136,7 @@ router.post("/fourm_data", async (req, res) => {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'institutionalized stigma';");
         
                 let nameArr = names.rows;
-        let result = '';
+        
         for (let i = 0; i < nameArr.length; i++) {
           result += nameArr[i].name;
         }
@@ -150,7 +151,7 @@ router.post("/fourm_data", async (req, res) => {
           const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'other';");
         
                 let nameArr = names.rows;
-        let result = '';
+        
         for (let i = 0; i < nameArr.length; i++) {
           result += nameArr[i].name;
         }
