@@ -14,8 +14,9 @@ app.set('view engine', 'ejs')
 //inistal /get
 app.get("/", (req, res) => {
     res.render("index")  
-    
 })  
+
+app.use(express.static(__dirname + '/public'));
 
 
 //all requests going to db_routes

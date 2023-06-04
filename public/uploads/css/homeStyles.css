@@ -1,0 +1,8 @@
+article {
+    display:inline;
+}
+#canvas {
+    height:5rem;
+    width:100%;
+    border:3px solid black;
+}
