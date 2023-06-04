@@ -38,14 +38,93 @@ router.post("/fourm_data", async (req, res) => {
             }
         })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-      try {
-        const get_depression_names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'autism';");
       
-       console.log(get_depression_names);
-      } catch (err) { 
-        console.error('Error executing the query: ' + err.stack);
-        return res.render('unsuccessful_query');
+      if (disorder == 'academic') {
+        try {
+          const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'academic';");
+        
+        console.log(names);
+        } catch (err) { 
+          console.error('Error executing the query: ' + err.stack);
+          return res.render('unsuccessful_query');
+        }
+      }
+
+      if (disorder == 'activities') {
+        try {
+          const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'activities';");
+        
+        console.log(names);
+        } catch (err) { 
+          console.error('Error executing the query: ' + err.stack);
+          return res.render('unsuccessful_query');
+        }
+      }
+
+      if (disorder == 'financial') {
+        try {
+          const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'financial';");
+        
+        console.log(names);
+        } catch (err) { 
+          console.error('Error executing the query: ' + err.stack);
+          return res.render('unsuccessful_query');
+        }
+      }
+
+      if (disorder == 'social') {
+        try {
+          const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'social';");
+        
+        console.log(names);
+        } catch (err) { 
+          console.error('Error executing the query: ' + err.stack);
+          return res.render('unsuccessful_query');
+        }
+      }
+
+      if (disorder == 'medical') {
+        try {
+          const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'medical';");
+        
+        console.log(names);
+        } catch (err) { 
+          console.error('Error executing the query: ' + err.stack);
+          return res.render('unsuccessful_query');
+        }
+      }
+
+      if (disorder == 'family') {
+        try {
+          const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'family';");
+        
+        console.log(names);
+        } catch (err) { 
+          console.error('Error executing the query: ' + err.stack);
+          return res.render('unsuccessful_query');
+        }
+      }
+
+      if (disorder == 'institutionalized stigma') {
+        try {
+          const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'institutionalized stigma';");
+        
+        console.log(names);
+        } catch (err) { 
+          console.error('Error executing the query: ' + err.stack);
+          return res.render('unsuccessful_query');
+        }
+      }
+
+      if (disorder == 'other') {
+        try {
+          const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'other';");
+        
+        console.log(names);
+        } catch (err) { 
+          console.error('Error executing the query: ' + err.stack);
+          return res.render('unsuccessful_query');
+        }
       }
 
 
