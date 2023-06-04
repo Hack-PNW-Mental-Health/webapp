@@ -48,19 +48,12 @@ router.post("/fourm_data", async (req, res) => {
         return res.render('unsuccessful_query');
       }
 
-<<<<<<< HEAD
             
 
 
 
             // Query executed successfully
             return res.render('succesful_query');
-=======
-
-////////////////////////////////////////
-  
-      return res.render('succesful_query');
->>>>>>> 72e94f37755633a36be84f50124071f0d6a9c29e
 
 
 
