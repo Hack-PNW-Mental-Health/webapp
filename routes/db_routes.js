@@ -26,7 +26,7 @@ router.post("/fourm_data", async (req, res) => {
         disorder, 
         story } = req.body;
         
-        //the query  
+        //the query to update the fourm
         const values = [name, age, gender, disorder, story];   
 
         const query = 'INSERT INTO fourm_data.fourm_data (name, age, gender, disorder, story) VALUES ($1, $2, $3, $4, $5)';
@@ -36,19 +36,41 @@ router.post("/fourm_data", async (req, res) => {
               console.error('Error executing the query: ' + err.stack);
               return res.render('unsuccesful_query');
             }
-        
+        })
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+      try {
+        const depressionQuery = 'SELECT name FROM fourm_data WHERE disorder = "autism"';
+        const value_disorder = ["depression"];
+        console.log("before the query")
+
+        
+        const get_depression_names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'autism';");
+      
+       console.log(get_depression_names);
+      } catch (err) { 
+        console.log("errorsssssssssssss")
+        console.error('Error executing the query: ' + err.stack);
+        return res.render('unsuccessful_query');
+      }
+
+<<<<<<< HEAD
             
 
 
 
             // Query executed successfully
             return res.render('succesful_query');
+=======
+
+////////////////////////////////////////
+  
+      return res.render('succesful_query');
+>>>>>>> 72e94f37755633a36be84f50124071f0d6a9c29e
 
 
 
           });
-        });
 
 
 
