@@ -39,9 +39,9 @@ router.post("/fourm_data", async (req, res) => {
         })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       
-      if (disorder == 'academic') {
+      if (disorder == 'school stress') {
         try {
-          const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'academic';");
+          const names = await db.query("SELECT name FROM fourm_data.fourm_data WHERE disorder = 'school stress';");
         
         console.log(names);
         } catch (err) { 
