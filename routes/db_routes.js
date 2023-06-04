@@ -160,12 +160,13 @@ router.post("/fourm_data", async (req, res) => {
         }
       }
 
-            
 
-
+            const render_items = {
+              people: result
+            }
 
             // Query executed successfully
-            return res.render('succesful_query');
+            return res.render('succesful_query', render_items);
 
 
 
